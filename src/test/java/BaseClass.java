@@ -11,7 +11,10 @@ import static com.codeborne.selenide.Selenide.open;
 
     abstract public class BaseClass {
         public void setUp() {
-
+        }
+        @BeforeEach
+        public void baseURL() {
+            open("https://shop.lenovo.kz/");
         }
         @BeforeEach
         public void init() {

@@ -10,7 +10,6 @@ public class MainTestScenario extends BaseClass{
     @DisplayName("Базовое открытие главной страницы сайта")
     @Test
     public void checkOpenMainPage() {
-        open("https://shop.lenovo.kz/");
         mainPage.checkOpenMainPageFromHeaders();
     }
     @DisplayName("Переход на страницу авторизации")
@@ -38,5 +37,13 @@ public class MainTestScenario extends BaseClass{
         mainPage.enterValidInfo();
         mainPage.setGenderSelectionManActions();
         mainPage.exitFromPersAccount();
+    }
+    @DisplayName("Полный тест сценарий входа, выбора гендера и выхода из ЛК")
+    @Test
+    public void fullScenarioMain() {
+    mainPage.transitionInLoginPage();
+    mainPage.enterValidInfo();
+    mainPage.setGenderSelectionManActions();
+    mainPage.exitFromPersAccount();
     }
 }
